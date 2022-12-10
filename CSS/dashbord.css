@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* border: 1px solid #000; */
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+/*-- Level of dificulties --*/
+.levelDificulty{
+    /* border: 1px solid #000; */
+    display: flex;
+    max-width: 35rem;
+    margin: 0 auto;
+    margin-top: 25px;
+    justify-content: space-between;
+    padding-right: 1rem;
+    border-radius: 2px;
+}   
+    .inviDiv{
+        width: 100px;
+    }
+
+    .level{
+        /* border: 1px solid #000; */
+    
+    }
+        .level button{
+            padding: 6px 12px;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+        }
+        .easy{
+            background-color: #67A635;
+        }
+            .easy:hover{
+                background-color: #234904;
+            }
+        .normal{
+            background-color: #0F81B2;
+        }
+            .normal:hover{
+               background-color: #053b52;
+            } 
+        .hard{
+            background-color: #915EFC;
+        }
+            .hard:hover{
+                background-color: #170244;
+            }
+        /*-- Level of dificulties End--*/
+
+/*-- Container 2--*/
+.container2{
+    /* border: 1px solid #000; */
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+    .nameScore{
+        display: flex;
+        justify-content: space-between;
+    }
+
+#aiShowAnswer{
+    background-color: #D9D9D9;
+    padding: 8px 16px;
+    width: 8rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#question{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+
+}
+#question #txtQuestion{
+    font-size: 50px;
+}
+#time-counter-down{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.userAnswerSubmit{
+    /* border: 1px solid #000; */
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+    #userAnswer-input{
+        padding: .2rem .4rem;
+        width: 100%;
+        outline: 0;
+        margin-right: 5px;
+    }
+    .userAnswerSubmit #submit{
+        padding: 6px 12px;
+        background-color: #67A635;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .userAnswerSubmit #submit:hover{
+        background-color: #234904;
+    }
+.nameScore{
+    margin-top: 10px;
+}
+.startgame-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+    #startGame{
+        padding: 8px 16px;
+        background-color: #67A635;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+        #startGame:hover{
+            background-color: #234904;
+        }
+    /*-- Container 2 End --*/
+
+/* Easy button */
+.hidden-el{
+    display: none;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.hidden-el.easy{
+    display: block;
+}
+
+/* Normal button */
+.hidden-el1{
+    display: none;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.hidden-el1.normal{
+    display: block;
+}
+
+/* Hard button */
+.hidden-el2{
+    display: none;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.hidden-el2.hard{
+    display: block;
+}
+
+/* next container */
+.nextContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+/* User save the answer */
+#userSaveAnswer-el{
+    border: 1px solid #000;
+    list-style: none;
+    width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+}

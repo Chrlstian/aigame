@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    border: 1px solid #000;
+}
+    .robot{
+        
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .robot img{
+        width: 150px;
+        height: 150px;
+    }
+.container2{
+    
+    width: 250px;
+    margin: 0 auto;
+}
+    #welcomeBox{
+        width: 250px;
+        height: 180px;
+        border: 1px solid #000;
+        border-radius: 2rem;
+        padding: .5rem 1rem;
+    }
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+    #btnBack{
+        padding: 8px 16px;
+        background-color: #0F81B2;
+        border: 0;
+        border-radius: .2rem;
+        cursor: pointer;
+        color: #fff;
+    }
+    #btnContinue{
+        padding: 8px 16px;
+        background-color: #0F81B2;
+        border: 0;
+        border-radius: .2rem;
+        cursor: pointer;
+        color: #fff;
+    }
+

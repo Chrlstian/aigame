@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play</title>
+    <link rel="stylesheet" href="./CSS/dashbord.css">
+</head>
+<body>
+    <div class="container">
+        <div class="levelDificulty">
+            <div class="inviDiv"></div>
+            <div class="level">
+                <button class="easy">Easy</button>
+                <button class="normal">Normal</button>
+                <button class="hard">Hard</button>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="nameScore">
+                <h3>Computer: <span id="aiName">Jade</span></h3>
+                <h3>Score: <span id="aiScore">0</span><span>/3</span></h3>
+            </div>
+            <div id="aiShowAnswer">Show Answer</div>
+            <textarea name="questions" id="question" cols="30" rows="10"></textarea>
+            <p id="notification"></p>
+            
+            <div class="nextContainer">
+                <div></div>
+                <button class="hidden-el">Next Question >></button>
+                <button class="hidden-el1">Next Question >></button>
+                <button class="hidden-el2">Next Question >></button>
+            </div>
+            <div class="userAnswerSubmit">
+                <input type="text" placeholder="Answer" id="userAnswer-input">
+                <button id="submit">Submit</button>
+            </div>
+            <div class="nameScore">
+                <h3>Player: <span id="userName">Chris123</span></h3>
+                <h3>Score: <span id="userScore">0</span><span>/3</span></h3>
+            </div>
+            <ul id="userSaveAnswer-el">
+                <h2>Your Answer</h2>
+            </ul>
+            
+            <!-- <div class="startgame-container">
+                <button id="startGame">Start Game</button>
+            </div> -->
+        </div>
+    </div>
+
+<script src="./JS/dashbord.js"></script>
+<script src="./JS/userComputerScore.js"></script>
+</body>
+</html>

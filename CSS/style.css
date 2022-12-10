@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*-- Container 1 and 2 --*/
+.container{
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+    .gameName{
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 3.5rem;
+        color: #234904;
+    }
+    .tech{
+        color: #170244;
+    }
+    .container2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        .container2 #btnStart{
+            margin-left: 5px;
+            padding: 8px 16px;
+            background-color: #0F81B2;
+            border: 0;
+            border-radius: .2rem;
+            cursor: pointer;
+            color: #fff;
+        }
+    #error{
+        
+        margin-left: 1.3rem;
+        margin-top: .5rem;
+    }
+.bgMusic{
+    display: none;
+}
+/*-- Container 1 and 2 End --*/
