@@ -1,4 +1,6 @@
-
+//sample
+const aiShowAnswer = document.getElementById("aiShowAnswer");
+const userShowAnswer = document.getElementById("userShowAnswer");
 //getting the value from local storage "name";
 let nameEl = localStorage.getItem("name");
 
@@ -23,8 +25,9 @@ const submitBtn = document.getElementById("submit");
 //User input
 const userInput = document.getElementById("userAnswer-input");
 
-//user score
+//user score & ai score
 const userScore = document.getElementById("userScore");
+const aiScore = document.getElementById("aiScore");
 
 //user data stored
 const playerAnswerData = [];
@@ -35,6 +38,7 @@ userName.textContent = nameEl;
 //Function of Difficulty level
 easy.addEventListener("click", () =>{
     userScore.textContent = `${userScores = 0}`; 
+    aiScore.textContent = `${aiScoreEasy = 0}`;
     txtQuestion.innerHTML = `${easyQuestion[0]}`;
     hiddenEl1.classList.remove("normal");
     hiddenEl2.classList.remove("hard");
@@ -47,6 +51,7 @@ easy.addEventListener("click", () =>{
 
 normal.addEventListener("click", () =>{
     userScore.textContent = `${userScores = 0}`; 
+    aiScore.textContent = `${aiScoreEasy = 0}`;
     txtQuestion.innerHTML = `${normalQuestion[0]}`;
     hiddenEl.classList.remove("easy");
     hiddenEl2.classList.remove("hard");
@@ -60,6 +65,7 @@ normal.addEventListener("click", () =>{
 
 hard.addEventListener("click", () =>{
     userScore.textContent = `${userScores = 0}`; 
+    aiScore.textContent = `${aiScoreEasy = 0}`;
     txtQuestion.innerHTML = `${hardQuestion[0]}`;
     hiddenEl.classList.remove("easy");
     hiddenEl1.classList.remove("normal");
@@ -73,7 +79,7 @@ hard.addEventListener("click", () =>{
 //Easy, normal, hard... Question array value
 const easyQuestion = ["Who is the developer of QuizTech", "Give atleast one programming language.", "Are you human?"];
 const normalQuestion = ["Name of my father", "Name of my mother?", "Name of my dog?"];
-const hardQuestion = ["What is my age?", "What is my nick name?", "What is my color"];
+const hardQuestion = ["What is the color of my hair?", "What is my nick name?", "What is my color"];
 
 //startGame function
 // startGame.addEventListener("click", () =>{
@@ -101,6 +107,9 @@ submitBtn.addEventListener("click", () =>{
     easyResult();
     normalResult();
     hardResult();
+    easyAiScore();
+    normalAiScore();
+    hardAiScore();
     userSaveAnswer.push(userInput.value);
     userSave.innerHTML += `<li>${userSaveAnswer}</li>`;
     userSaveAnswer.shift();
@@ -113,6 +122,7 @@ function easyCounter(){
     }
     txtQuestion.innerHTML = easyQuestion[counter];
     userInput.value = "";
+    
 }
 
 function normalCounter(){
@@ -137,15 +147,55 @@ function easyResult(){
     if(txtQuestion.value === easyQuestion[0] && userInput.value === "Christian" || userInput.value === "christian"){
         userScores++;
         userScore.textContent = `${userScores}`;
-    } else if(txtQuestion.value === easyQuestion[1] && userInput.value === "javascript"){
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";
+        setTimeout(() =>{
+            userShowAnswer.style.color = "black";
+            userShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === easyQuestion[1] && userInput.value === "javascript" || userInput.value === "Javascript"){
         userScores++;
-        userScore.textContent = `${userScores}`;         
-    } else if(txtQuestion.value === easyQuestion[2] && userInput.value === "yes"){
+        userScore.textContent = `${userScores}`;  
+        userShowAnswer.textContent = "Correct"; 
+        userShowAnswer.style.color = "#234904";
+        setTimeout(() =>{
+            userShowAnswer.style.color = "black";
+            userShowAnswer.textContent = "Show Answer";
+        },2000)      
+    } else if(txtQuestion.value === easyQuestion[2] && userInput.value === "yes" || userInput.value === "Yes"){
         userScores++;
-        userScore.textContent = `${userScores}`;         
-    } else if(userScore.value === 0){
+        userScore.textContent = `${userScores}`;   
+        userShowAnswer.textContent = "Correct";  
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.style.color = "black";
+            userShowAnswer.textContent = "Show Answer";
+        },2000)  
+    } else if(txtQuestion.value === easyQuestion[0] && userInput.value !== "Christian" || userInput.value !== "christian"){
+        userShowAnswer.textContent = "Wrong";
+        userShowAnswer.style.color = "red";
+        setTimeout(() =>{
+            userShowAnswer.style.color = "black";
+            userShowAnswer.textContent = "Show Answer";
+        },2000)  
+    } else if(txtQuestion.value === easyQuestion[1] && userInput.value !== "javascript" || userInput.value !== "Javascript"){
+        userShowAnswer.textContent = "Wrong";
+        userShowAnswer.style.color = "red";
+        setTimeout(() =>{
+            userShowAnswer.style.color = "black";
+            userShowAnswer.textContent = "Show Answer";
+        },2000)  
+    } else if(txtQuestion.value === easyQuestion[2] && userInput.value !== "yes" || userInput.value !== "Yes"){
+        userShowAnswer.textContent = "Wrong";
+        userShowAnswer.style.color = "red";
+        setTimeout(() =>{
+            userShowAnswer.style.color = "black";
+            userShowAnswer.textContent = "Show Answer";
+        },2000)  
+    }
+    else if(userScore.value === 0){
         userScores = 0;
-        userScore.textContent = `${userScores}`;         
+        userScore.textContent = `${userScores}`;    
     }
 
 }
@@ -154,12 +204,27 @@ function normalResult(){
     if(txtQuestion.value === normalQuestion[0] && userInput.value === "Romeo" || userInput.value === "romeo"){
         userScores++;
         userScore.textContent = `${userScores}`;
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.textContent = "Show Answer";
+        },2000)
     } else if(txtQuestion.value === normalQuestion[1] && userInput.value === "Nora" || userInput.value === "nora"){
         userScores++;
-        userScore.textContent = `${userScores}`;         
+        userScore.textContent = `${userScores}`;
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.textContent = "Show Answer";
+        },2000)         
     } else if(txtQuestion.value === normalQuestion[2] && userInput.value === "Romca" || userInput.value === "romca"){
         userScores++;
-        userScore.textContent = `${userScores}`;         
+        userScore.textContent = `${userScores}`;     
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.textContent = "Show Answer";
+        },2000)    
     } else if(userScore.value === 0){
         userScores = 0;
         userScore.textContent = `${userScores}`;         
@@ -167,17 +232,158 @@ function normalResult(){
 }
 
 function hardResult(){
-    if(txtQuestion.value === hardQuestion[0] && userInput.value === "bens"){
+    if(txtQuestion.value === hardQuestion[0] && userInput.value === "black"){
         userScores++;
         userScore.textContent = `${userScores}`;
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.textContent = "Show Answer";
+        },2000)
     } else if(txtQuestion.value === hardQuestion[1] && userInput.value === "Benson" || userInput.value === "benson"){
         userScores++;
         userScore.textContent = `${userScores}`;         
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.textContent = "Show Answer";
+        },2000)
     } else if(txtQuestion.value === hardQuestion[2] && userInput.value === "Brown" || userInput.value === "brown"){
         userScores++;
-        userScore.textContent = `${userScores}`;         
+        userScore.textContent = `${userScores}`;   
+        userShowAnswer.textContent = "Correct";
+        userShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            userShowAnswer.textContent = "Show Answer";
+        },2000)      
     } else if(userScore.value === 0){
         userScores = 0;
         userScore.textContent = `${userScores}`;         
     }
 }
+
+//score of AI
+let aiScoreEasy = 0;
+let random = Math.floor(Math.random() * 2);
+function easyAiScore(){
+
+    if(txtQuestion.value === easyQuestion[0]){
+        aiScoreEasy++;
+        aiScore.textContent = `${aiScoreEasy}`;
+        aiShowAnswer.textContent = "Correct";
+        aiShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            aiShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === easyQuestion[1]){
+        aiScoreEasy++;
+        aiScore.textContent = `${aiScoreEasy}`;
+        aiShowAnswer.textContent = "Correct";
+        aiShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            aiShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === easyQuestion[2]){
+        switch(random){
+            case 0:
+                aiScoreEasy++;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Correct";
+                aiShowAnswer.style.color = "#234904";
+                break;
+            case 1:
+                // aiScoreEasy = 0;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Wrong";
+                aiShowAnswer.style.color = "red";
+                break;
+        }
+    } else if(aiScore.value === 0){
+        aiScoreEasy = 0;
+        aiScore.textContent = `${aiScoreEasy}`;         
+    }
+
+}
+
+function normalAiScore(){
+
+    if(txtQuestion.value === normalQuestion[0]){
+        aiScoreEasy++;
+        aiScore.textContent = `${aiScoreEasy}`;
+        aiShowAnswer.textContent = "Correct";
+        aiShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            aiShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === normalQuestion[1]){
+        aiScoreEasy++;
+        aiScore.textContent = `${aiScoreEasy}`;
+        aiShowAnswer.textContent = "Correct";
+        aiShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            aiShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === normalQuestion[2]){
+        switch(random){
+            case 0:
+                aiScoreEasy++;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Correct";
+                aiShowAnswer.style.color = "#234904";
+                break;
+            case 1:
+                // aiScoreEasy = 0;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Wrong";
+                aiShowAnswer.style.color = "red";
+                break;
+        }
+    } else if(aiScore.value === 0){
+        aiScoreEasy = 0;
+        aiScore.textContent = `${aiScoreEasy}`;         
+    }
+
+}
+
+function hardAiScore(){
+
+    if(txtQuestion.value === hardQuestion[0]){
+        aiScoreEasy++;
+        aiScore.textContent = `${aiScoreEasy}`;
+        aiShowAnswer.textContent = "Correct";
+        aiShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            aiShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === hardQuestion[1]){
+        aiScoreEasy++;
+        aiScore.textContent = `${aiScoreEasy}`;
+        aiShowAnswer.textContent = "Correct";
+        aiShowAnswer.style.color = "#234904";  
+        setTimeout(() =>{
+            aiShowAnswer.textContent = "Show Answer";
+        },2000)
+    } else if(txtQuestion.value === hardQuestion[2]){
+        switch(random){
+            case 0:
+                aiScoreEasy++;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Correct";
+                aiShowAnswer.style.color = "#234904";
+                break;
+            case 1:
+                // aiScoreEasy = 0;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Wrong";
+                aiShowAnswer.style.color = "red";
+                break;
+        } 
+    } else if(aiScore.value === 0){
+        aiScoreEasy = 0;
+        aiScore.textContent = `${aiScoreEasy}`;         
+    }
+
+}
+//User Correct and wrong
+
+  
