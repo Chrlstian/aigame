@@ -1,6 +1,8 @@
 //sample
 const aiShowAnswer = document.getElementById("aiShowAnswer");
 const userShowAnswer = document.getElementById("userShowAnswer");
+const chatBox = document.getElementById("chatbox");
+const aiChatBox = document.getElementById("aiChatBox");
 //getting the value from local storage "name";
 let nameEl = localStorage.getItem("name");
 
@@ -110,6 +112,8 @@ submitBtn.addEventListener("click", () =>{
     easyAiScore();
     normalAiScore();
     hardAiScore();
+    greet();
+    aiGreet();
     userSaveAnswer.push(userInput.value);
     userSave.innerHTML += `<li>${userSaveAnswer}</li>`;
     userSaveAnswer.shift();
@@ -308,13 +312,27 @@ function easyAiScore(){
 function normalAiScore(){
 
     if(txtQuestion.value === normalQuestion[0]){
-        aiScoreEasy++;
-        aiScore.textContent = `${aiScoreEasy}`;
-        aiShowAnswer.textContent = "Correct";
-        aiShowAnswer.style.color = "#234904";  
-        setTimeout(() =>{
-            aiShowAnswer.textContent = "Show Answer";
-        },2000)
+        switch(random){
+            case 0:
+                aiScoreEasy++;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Correct";
+                aiShowAnswer.style.color = "#234904";
+                break;
+            case 1:
+                // aiScoreEasy = 0;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Wrong";
+                aiShowAnswer.style.color = "red";
+                break;
+        }
+        // aiScoreEasy++;
+        // aiScore.textContent = `${aiScoreEasy}`;
+        // aiShowAnswer.textContent = "Correct";
+        // aiShowAnswer.style.color = "#234904";  
+        // setTimeout(() =>{
+        //     aiShowAnswer.textContent = "Show Answer";
+        // },2000)
     } else if(txtQuestion.value === normalQuestion[1]){
         aiScoreEasy++;
         aiScore.textContent = `${aiScoreEasy}`;
@@ -348,21 +366,49 @@ function normalAiScore(){
 function hardAiScore(){
 
     if(txtQuestion.value === hardQuestion[0]){
-        aiScoreEasy++;
-        aiScore.textContent = `${aiScoreEasy}`;
-        aiShowAnswer.textContent = "Correct";
-        aiShowAnswer.style.color = "#234904";  
-        setTimeout(() =>{
-            aiShowAnswer.textContent = "Show Answer";
-        },2000)
+        switch(random){
+            case 0:
+                aiScoreEasy++;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Correct";
+                aiShowAnswer.style.color = "#234904";
+                break;
+            case 1:
+                // aiScoreEasy = 0;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Wrong";
+                aiShowAnswer.style.color = "red";
+                break;
+        }
+        // aiScoreEasy++;
+        // aiScore.textContent = `${aiScoreEasy}`;
+        // aiShowAnswer.textContent = "Correct";
+        // aiShowAnswer.style.color = "#234904";  
+        // setTimeout(() =>{
+        //     aiShowAnswer.textContent = "Show Answer";
+        // },2000)
     } else if(txtQuestion.value === hardQuestion[1]){
-        aiScoreEasy++;
-        aiScore.textContent = `${aiScoreEasy}`;
-        aiShowAnswer.textContent = "Correct";
-        aiShowAnswer.style.color = "#234904";  
-        setTimeout(() =>{
-            aiShowAnswer.textContent = "Show Answer";
-        },2000)
+        switch(random){
+            case 0:
+                aiScoreEasy++;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Correct";
+                aiShowAnswer.style.color = "#234904";
+                break;
+            case 1:
+                // aiScoreEasy = 0;
+                aiScore.textContent = `${aiScoreEasy}`;
+                aiShowAnswer.textContent = "Wrong";
+                aiShowAnswer.style.color = "red";
+                break;
+        }
+        // aiScoreEasy++;
+        // aiScore.textContent = `${aiScoreEasy}`;
+        // aiShowAnswer.textContent = "Correct";
+        // aiShowAnswer.style.color = "#234904";  
+        // setTimeout(() =>{
+        //     aiShowAnswer.textContent = "Show Answer";
+        // },2000)
     } else if(txtQuestion.value === hardQuestion[2]){
         switch(random){
             case 0:
@@ -384,6 +430,29 @@ function hardAiScore(){
     }
 
 }
-//User Correct and wrong
+
+//
+function greet(){
+
+    if(userScores === 3){
+        chatBox.textContent = "Perfect!! you win";
+        
+    } else if(userScores == 2){
+        chatBox.textContent = "One more to go!!";
+        setTimeout(() =>{
+            chatBox.textContent = "";
+        },2000)
+    } 
+}
+
+function aiGreet(){
+    if(aiScoreEasy === 3){
+        aiChatBox.innerHTML = `<b>Jade:</b> Easy win..`
+        setTimeout(() =>{
+            aiChatBox.innerHTML = "";
+        },2000)
+    }
+}
+
 
   

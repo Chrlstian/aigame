@@ -86,6 +86,19 @@
     cursor: pointer;
 }
 /*-- Correct and Wrong END -- */
+.chat-box{
+    display: flex;
+}
+#chatbox{
+    margin-left: 1rem;
+    margin-top: 10px;
+    padding: 8px 16px;
+}
+#aiChatBox{
+    margin-left: 1rem;
+    margin-top: 10px;
+    padding: 8px 16px;
+}
 #question{
     margin-top: 15px;
     width: 100%;
