@@ -43,3 +43,36 @@
     display: none;
 }
 /*-- Container 1 and 2 End --*/
+.dev2x-container{
+    width: 100%;
+}
+.dev-container{
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 15rem;
+}
+.name{
+    font-size: 26px;
+    font-weight: 600;
+    color: #170244;
+    margin-bottom: 10px;
+}
+    .developer{
+        display: flex;
+        margin: 0 auto;
+        width: 200px;
+    }
+        .img-dev{
+            width: 100px;
+            text-align: center;
+        }
+        .imgDev{
+            border-radius: 100%;
+            width: 70px;
+            height: 70px;
+        }
+        h4{
+            font-size: 10px;
+
+        }

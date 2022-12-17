@@ -79,9 +79,9 @@ hard.addEventListener("click", () =>{
 })
 
 //Easy, normal, hard... Question array value
-const easyQuestion = ["Who is the developer of QuizTech", "Give atleast one programming language.", "Are you human?"];
-const normalQuestion = ["Name of my father", "Name of my mother?", "Name of my dog?"];
-const hardQuestion = ["What is the color of my hair?", "What is my nick name?", "What is my color"];
+const easyQuestion = ["What is the most used Programming language in web?", "Give atleast one programming language.", "1 + 1 = ?"];
+const normalQuestion = ["What of the robot who greet you when you open the QuizTech game?", "2 + 2 = ?", "The most visited site in the world?"];
+const hardQuestion = ["Who created Microsoft?", "Who created TESLA?", "3 + 3 = ?"];
 
 //startGame function
 // startGame.addEventListener("click", () =>{
@@ -148,53 +148,53 @@ function hardCounter(){
 //Functions of results
 function easyResult(){
 
-    if(txtQuestion.value === easyQuestion[0] && userInput.value === "Christian" || userInput.value === "christian"){
+    if(txtQuestion.value === easyQuestion[0] && userInput.value === "javascript" || userInput.value === "Javascript" || userInput.value === "JAVASCRIPT"){
         userScores++;
         userScore.textContent = `${userScores}`;
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";
         setTimeout(() =>{
             userShowAnswer.style.color = "black";
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)
-    } else if(txtQuestion.value === easyQuestion[1] && userInput.value === "javascript" || userInput.value === "Javascript"){
+    } else if(txtQuestion.value === easyQuestion[1] && userInput.value === "javascript" || userInput.value === "Javascript" || userInput.value === "python" || userInput.value === "Python" || userInput.value === "Java" || userInput.value === "java" || userInput.value === "C++" || userInput.value === "c++"){
         userScores++;
         userScore.textContent = `${userScores}`;  
         userShowAnswer.textContent = "Correct"; 
         userShowAnswer.style.color = "#234904";
         setTimeout(() =>{
             userShowAnswer.style.color = "black";
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)      
-    } else if(txtQuestion.value === easyQuestion[2] && userInput.value === "yes" || userInput.value === "Yes"){
+    } else if(txtQuestion.value === easyQuestion[2] && userInput.value === "2"){
         userScores++;
         userScore.textContent = `${userScores}`;   
         userShowAnswer.textContent = "Correct";  
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
             userShowAnswer.style.color = "black";
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)  
-    } else if(txtQuestion.value === easyQuestion[0] && userInput.value !== "Christian" || userInput.value !== "christian"){
+    } else if(txtQuestion.value === easyQuestion[0] && userInput.value !== "Javascript" || userInput.value !== "javascript"){
         userShowAnswer.textContent = "Wrong";
         userShowAnswer.style.color = "red";
         setTimeout(() =>{
             userShowAnswer.style.color = "black";
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)  
-    } else if(txtQuestion.value === easyQuestion[1] && userInput.value !== "javascript" || userInput.value !== "Javascript"){
+    } else if(txtQuestion.value === easyQuestion[1] && userInput.value !== "javascript" || userInput.value !== "Javascript" || userInput.value !== "Python" || userInput.value !== "python" || userInput.value !== "java" || userInput.value !== "Java" || userInput.value !== "C++" || userInput.value !== "c++"){
         userShowAnswer.textContent = "Wrong";
         userShowAnswer.style.color = "red";
         setTimeout(() =>{
             userShowAnswer.style.color = "black";
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)  
-    } else if(txtQuestion.value === easyQuestion[2] && userInput.value !== "yes" || userInput.value !== "Yes"){
+    } else if(txtQuestion.value === easyQuestion[2] && userInput.value !== "2"){
         userShowAnswer.textContent = "Wrong";
         userShowAnswer.style.color = "red";
         setTimeout(() =>{
             userShowAnswer.style.color = "black";
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)  
     }
     else if(userScore.value === 0){
@@ -205,29 +205,29 @@ function easyResult(){
 }
 
 function normalResult(){
-    if(txtQuestion.value === normalQuestion[0] && userInput.value === "Romeo" || userInput.value === "romeo"){
+    if(txtQuestion.value === normalQuestion[0] && userInput.value === "Alex" || userInput.value === "alex"){
         userScores++;
         userScore.textContent = `${userScores}`;
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)
-    } else if(txtQuestion.value === normalQuestion[1] && userInput.value === "Nora" || userInput.value === "nora"){
+    } else if(txtQuestion.value === normalQuestion[1] && userInput.value === "4"){
         userScores++;
         userScore.textContent = `${userScores}`;
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)         
-    } else if(txtQuestion.value === normalQuestion[2] && userInput.value === "Romca" || userInput.value === "romca"){
+    } else if(txtQuestion.value === normalQuestion[2] && userInput.value === "Google" || userInput.value === "google"){
         userScores++;
         userScore.textContent = `${userScores}`;     
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)    
     } else if(userScore.value === 0){
         userScores = 0;
@@ -236,29 +236,29 @@ function normalResult(){
 }
 
 function hardResult(){
-    if(txtQuestion.value === hardQuestion[0] && userInput.value === "black"){
+    if(txtQuestion.value === hardQuestion[0] && userInput.value === "Bill Gates" || userInput.value === "bill gates" || userInput.value === "Bill gates"){
         userScores++;
         userScore.textContent = `${userScores}`;
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)
-    } else if(txtQuestion.value === hardQuestion[1] && userInput.value === "Benson" || userInput.value === "benson"){
+    } else if(txtQuestion.value === hardQuestion[1] && userInput.value === "Elon Musk" || userInput.value === "Elon musk" || userInput.value === "elon musk"){
         userScores++;
         userScore.textContent = `${userScores}`;         
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)
-    } else if(txtQuestion.value === hardQuestion[2] && userInput.value === "Brown" || userInput.value === "brown"){
+    } else if(txtQuestion.value === hardQuestion[2] && userInput.value === "6" || userInput.value === "6 "){
         userScores++;
         userScore.textContent = `${userScores}`;   
         userShowAnswer.textContent = "Correct";
         userShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            userShowAnswer.textContent = "Show Answer";
+            userShowAnswer.textContent = "Checker";
         },2000)      
     } else if(userScore.value === 0){
         userScores = 0;
@@ -277,7 +277,7 @@ function easyAiScore(){
         aiShowAnswer.textContent = "Correct";
         aiShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            aiShowAnswer.textContent = "Show Answer";
+            aiShowAnswer.textContent = "Checker";
         },2000)
     } else if(txtQuestion.value === easyQuestion[1]){
         aiScoreEasy++;
@@ -285,7 +285,7 @@ function easyAiScore(){
         aiShowAnswer.textContent = "Correct";
         aiShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            aiShowAnswer.textContent = "Show Answer";
+            aiShowAnswer.textContent = "Checker";
         },2000)
     } else if(txtQuestion.value === easyQuestion[2]){
         switch(random){
@@ -339,7 +339,7 @@ function normalAiScore(){
         aiShowAnswer.textContent = "Correct";
         aiShowAnswer.style.color = "#234904";  
         setTimeout(() =>{
-            aiShowAnswer.textContent = "Show Answer";
+            aiShowAnswer.textContent = "Checker";
         },2000)
     } else if(txtQuestion.value === normalQuestion[2]){
         switch(random){
@@ -379,6 +379,12 @@ function hardAiScore(){
                 aiShowAnswer.textContent = "Wrong";
                 aiShowAnswer.style.color = "red";
                 break;
+            case 2:
+                    // aiScoreEasy = 0;
+                    aiScore.textContent = `${aiScoreEasy}`;
+                    aiShowAnswer.textContent = "Corect";
+                    aiShowAnswer.style.color = "#234904";
+                    break;
         }
         // aiScoreEasy++;
         // aiScore.textContent = `${aiScoreEasy}`;
@@ -438,7 +444,7 @@ function greet(){
         chatBox.textContent = "Perfect!! you win";
         
     } else if(userScores == 2){
-        chatBox.textContent = "One more to go!!";
+        chatBox.textContent = "Woah hooo!!";
         setTimeout(() =>{
             chatBox.textContent = "";
         },2000)

@@ -11,7 +11,7 @@ btnContinue.style.visibility = 'hidden';
 btnback.style.visibility = 'hidden';
 
 setTimeout(() =>{
-    welcomeBox.innerHTML = `Welcome <b>${nameEl}</b> my name is Alex and I will be the GM of the game!!`;
+    welcomeBox.innerHTML = `Welcome <b>${nameEl}</b> my name is Alex and I will be the Game Master(GM) of the game!!`;
 },1000)
 
 setTimeout(() =>{
